@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update a Pokemon</h1>
+    <h2><%= pokemon.name %></h2>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%= pokemon.name %>">
+        <br>
+        Type: <input type="text" name="type" value="<%= pokemon.type %>">
+        <br>
+        Stats
+        <br>
+        <ul>
+            <li>HP:<input type="text" name="HP" value="<%= pokemon.stats.hp %>"</li>
+            <li>Attack:<input type="text" name="Attack"value="<%= pokemon.stats.attack %>"</li>
+            <li>Defense:<input type="text" name="Attack"value="<%= pokemon.stats.defense %>"</li>
+            <li>Spattack:<input type="text" name="Attack"value="<%= pokemon.stats.spattack %>"</li>
+            <li>Spdefense:<input type="text" name="Attack"value="<%= pokemon.stats.spdefense %>"</li>
+            <li>Speed:<input type="text" name="Attack"value="<%= pokemon.stats.speed %>"</li>
+        </ul>
+        <input type="submit" value="Update Pokemon">
+    </form>
+</body>
+</html>

@@ -10,6 +10,7 @@
     <h1>Pokedex</h1>
     <h2><%= pokemon.name %></h2>
     <a href="/pokemon"><h3>Go Back to Index</h3></a>
+    <a href="/pokemon/<%= index %>/edit"><button>Edit</button></a>
     <main>
         <h3 id="type">Type:</h3>
         <ul><% for(let i=0; i<pokemon.type.length; i++){ %>
