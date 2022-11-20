@@ -5,33 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Pokedex</h1>
     <a href="/pokemon/new"><h2>Add a New Pokemon</h2></a>
     <% let index = Math.floor(Math.random() * 152) %>
-    <a href="/pokemon/<%= index %>"><img src="<%= pokemons[index].img %>"></a>
-        <a href="/pokemon/<%= index %>/edit"><button>Edit</button></a>
+    <div class="container">
+    <div class="parent"><a href="/pokemon/<%= index %>"><img src="<%= pokemons[index].img %>" class="picture"></a></div>
+        <div class = "child"><a href="/pokemon/<%= index %>/edit"><button>Edit</button></a></div>
+        <br>
         <form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>
     <% let indexTwo = Math.floor(Math.random() * 152) %>
-    <a href="/pokemon/<%= indexTwo %>"><img src="<%= pokemons[indexTwo].img %>"></a>
-        <a href="/pokemon/<%= indexTwo %>/edit"><button>Edit</button></a>
+    <div class="parent"><a href="/pokemon/<%= indexTwo %>"><img src="<%= pokemons[indexTwo].img %>" class="picture"></a></div>
+       <div class="child"><a href="/pokemon/<%= indexTwo %>/edit"><button>Edit</button></a></div>
         <form action="/pokemon/<%= indexTwo %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>
     <% let indexThree = Math.floor(Math.random() * 152) %>
-    <a href="/pokemon/<%= indexThree %>"><img src="<%= pokemons[indexThree].img %>"></a>
-        <a href="/pokemon/<%= indexThree %>/edit"><button>Edit</button></a>
+    <div class="parent"><a href="/pokemon/<%= indexThree %>"><img src="<%= pokemons[indexThree].img %>" class="picture"></a></div>
+        <div class="child"><a href="/pokemon/<%= indexThree %>/edit"><button>Edit</button></a></div>
         <form action="/pokemon/<%= indexThree %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>
     <% let indexFour = Math.floor(Math.random() * 152) %>
-    <a href="/pokemon/<%= indexFour %>>"><img src="<%= pokemons[indexFour].img %>"></a>
-        <a href="/pokemon/<%= indexFour %>/edit"><button>Edit</button></a>
+    <div class="parent"><a href="/pokemon/<%= indexFour %>>"><img src="<%= pokemons[indexFour].img %>" class="picture"></a></div>
+        <div class="child"><a href="/pokemon/<%= indexFour %>/edit"><button>Edit</button></a></div>
         <form action="/pokemon/<%= indexFour %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete">
         </form>
+    </div>
 </body>
 </html>

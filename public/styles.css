@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main";
+}
+
+h1 {
+    grid-area: header;
+    margin: 0 auto;
+}
+
+h2 {
+    grid-area: header;
+}
+
+.container {
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
+    grid-area: main;
+    flex-wrap: wrap;
+    
+}
+
+.item {
+    margin: 1em;
+    width: 25%;
+    position: absolute;
+}
+
+.picture {
+    mix-blend-mode: hard-light;
+    border: .5em solid black;
+    border-radius: 7em;
+    height: 30%;
+    margin: 1em;
+}
+
+button {
+    grid-area: main;
+    text-align: center;
+}
+
+
+

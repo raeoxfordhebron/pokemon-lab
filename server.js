@@ -7,8 +7,10 @@ const methodOverride = require('method-override')
 const PORT = process.env.PORT || 3000
 
 // Middleware
+app.use(express.urlencoded({extended: true}))
 app.use(morgan("tiny"))
 app.use(methodOverride("_method"))
+app.use("/static", express.static("public"))
 
 // Database
 const pokemons = require('./models/pokemon.js')
