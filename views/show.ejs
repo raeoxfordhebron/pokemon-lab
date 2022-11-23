@@ -12,7 +12,9 @@
     <h2><%= pokemon.name %></h2>
     <a href="/pokemon"><h3>Go Back to Index</h3></a>
     <a href="/pokemon/<%= index %>/edit"><button>Edit</button></a>
+    <div id="box">
     <main>
+        <div class="container-two">
         <h3 id="type">Type:</h3>
         <ul><% for(let i=0; i<pokemon.type.length; i++){ %>
             <li><%= pokemon.type[i] %></li>
@@ -27,7 +29,9 @@
             <li>Spdefense: <%= pokemon.stats.spdefense %></li>
             <li>Speed: <%= pokemon.stats.speed %></li>
         </ul>
+        </div>
         <img src="<%= pokemon.img %>">
+    </div>
     </main>
 </body>
 </html>

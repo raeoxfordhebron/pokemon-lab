@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     display: grid;
     grid-template-areas: 
@@ -9,10 +13,14 @@ body {
 h1 {
     grid-area: header;
     margin: 0 auto;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 h2 {
     grid-area: header;
+    text-align: center;
+    margin: 3em auto;
 }
 
 .container {
@@ -25,27 +33,60 @@ h2 {
     padding: 1em;
     grid-area: main;
     flex-wrap: wrap;
-    
+    width: 80%;
+    border: .2em solid black;
+    border-radius: 1em;
+    max-width: 1000px;
 }
 
 .item {
     margin: 1em;
     width: 25%;
-    position: absolute;
+    
 }
 
 .picture {
     mix-blend-mode: hard-light;
-    border: .5em solid black;
+    border: .4em solid black;
     border-radius: 7em;
     height: 30%;
-    margin: 1em;
+    margin: .5em;
 }
 
 button {
     grid-area: main;
     text-align: center;
+    
 }
 
+ul {
+    list-style-type: none;
+}
 
+.container-two {
+    background-color: pink;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em;
+    grid-area: main;
+    width: 50%;
+    border: .2em solid black;
+    border-radius: 1em;
+    margin: 2em auto;
+}
 
+#box {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.child {
+    margin: 0 auto;
+}
