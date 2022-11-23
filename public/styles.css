@@ -3,8 +3,11 @@
 }
 
 body {
-    display: flex;
-    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "main main";
 }
 
 h1 {
@@ -19,7 +22,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 10em auto;
+    margin: 0 auto;
     padding: 1em;
     grid-area: main;
     flex-wrap: wrap;
@@ -99,6 +102,11 @@ ul {
     justify-content: center;
     align-content: center;
     text-align: center;
-    position: absolute;
-    transform: translate(390%)
+    transform: translate(290%)
+}
+
+main {
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
 }
