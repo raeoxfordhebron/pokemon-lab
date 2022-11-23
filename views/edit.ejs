@@ -11,11 +11,17 @@
     <h1>Update a Pokemon</h1>
     <h2><%= pokemon.name %></h2>
     <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        <label id="name">
         Name: <input type="text" name="name" value="<%= pokemon.name %>">
+        </label>
         <br>
+        <label id="type">
         Type: <input type="text" name="type" value="<%= pokemon.type %>">
+        </label>
         <br>
+        <label id="stats">
         Stats
+        </label>
         <br>
         <ul>
             <li>HP:<input type="text" name="HP" value="<%= pokemon.stats.hp %>"</li>

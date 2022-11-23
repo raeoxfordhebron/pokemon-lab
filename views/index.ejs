@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+    <div class="header-name">
     <h1>Pokedex</h1>
     <a href="/pokemon/new"><h2>Add a New Pokemon</h2></a>
     <% let index = Math.floor(Math.random() * 152) %>
+    </div>
     <div class="container">
     <div class="flex-column">
     <a href="/pokemon/<%= index %>"><img src="<%= pokemons[index].img %>" class="picture"></a>
